@@ -14,11 +14,11 @@ set(INCLUDE_DIRS ${INCLUDE_DIRS} ${CMAKE_CURRENT_BINARY_DIR})
 
 include_directories( ${INCLUDE_DIRS} )
 
-add_executable (test_include src/test_include.cpp ${SRC})
+add_executable (test_include test_include.cpp ${SRC})
 target_link_libraries(test_include PUBLIC ${CERES_LIBRARIES})
 target_include_directories(test_include PUBLIC ${CERES_INCLUDE_DIRS})
 
 
-add_executable (test_optimize_simple src/test_optimize_simple.cpp ${SRC})
+add_executable (test_optimize_simple test_optimize_simple.cpp ${SRC})
 target_link_libraries(test_optimize_simple PUBLIC ${CERES_LIBRARIES})
 target_include_directories(test_optimize_simple PUBLIC ${CERES_INCLUDE_DIRS})
